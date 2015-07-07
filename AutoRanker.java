@@ -16,19 +16,30 @@ public class AutoRanker extends JavaPlugin {
 
 	
 	public boolean onCommand (CommandSender sender, Command cmd, String label, String[] args){
+		
         if (cmd.getName().equalsIgnoreCase("ar")){
                 Player player = (Player) sender;
                 if (player.isOp()){
-                        if (args[0].equalsIgnoreCase("help")){
-                        		sender.sendMessage(ChatColor.DARK_RED + "Help command worked!");
+                	
+                	
+                	if (args.length == 0 || args == null) {
+               				sender.sendMessage(ChatColor.YELLOW + "No arguments entered.");
+                				
+               		} else if (args[0].equalsIgnoreCase("help")){
+        	          		sender.sendMessage(ChatColor.YELLOW + "Help command worked!");
+                        		
                         } else if (args[0].equalsIgnoreCase("info")){
-                        		sender.sendMessage(ChatColor.DARK_RED + "Info command worked!");
+                        		sender.sendMessage(ChatColor.YELLOW + "Info command worked!");
+                        		
                         } else if (args[0].equalsIgnoreCase("version")){
-                        		sender.sendMessage(ChatColor.DARK_RED + "Version command worked!");
+                        		sender.sendMessage(ChatColor.YELLOW + "Version command worked!");
+                        		
                         } else if (args[0].equalsIgnoreCase("dicks")){
-                        		sender.sendMessage(ChatColor.DARK_RED + "Dick command worked! Andy likes dicks!");
-                        } else if (args[0].equals("")){
-                        sender.sendMessage(ChatColor.DARK_RED + "No additional arguments entered. Please try again.");
+                        		sender.sendMessage(ChatColor.YELLOW + "Dick command worked! Andy likes dicks!");
+                        		
+                        } else {
+                        		sender.sendMessage(ChatColor.YELLOW + "Syntax error.");
+                        		
                         }
                 }
         }
