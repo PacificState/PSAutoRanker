@@ -4,4 +4,9 @@ package com.ressamp.autoranker.db;
 
 public class BuildData {
 
+// Features
+// Checking if the build has a file
+// Creating the file if the build does not
+// Updating the build file
+
 }
